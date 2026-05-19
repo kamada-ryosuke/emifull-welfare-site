@@ -3,7 +3,6 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EmotionalImage } from "@/components/ui/EmotionalImage";
 import { PageHero } from "@/components/sections/PageHero";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
-import { lifeStages } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
 const images = [
@@ -12,6 +11,39 @@ const images = [
   "/images/brand-job-college.webp",
   "/images/brand-nojigiku.webp",
   "/images/brand-hinode.webp"
+];
+
+const lifeStages = [
+  {
+    title: "未就学",
+    subtitle: "ことば・生活・安心の土台",
+    description: "ことば・生活・安心の土台を育てる。遊びや関わりの中で、伝えたい気持ちを少しずつ育みます。",
+    services: ["児童発達支援", "SORATO", "カラダキッズ", "BLOOM"]
+  },
+  {
+    title: "学齢期",
+    subtitle: "学び・関わり・自分らしさ",
+    description: "学び・関わり・自分らしさを育てる。学校や家庭とは違う居場所で、自分のペースを取り戻します。",
+    services: ["放課後等デイサービス", "UMIE", "カラダキッズ", "BLOOM"]
+  },
+  {
+    title: "思春期",
+    subtitle: "将来につながる経験と自信",
+    description: "将来につながる経験と自信を育てる。体験や役割を通して、働く未来へ向かう力を育みます。",
+    services: ["ジョブカレッジ", "就労準備型放デイ"]
+  },
+  {
+    title: "働く",
+    subtitle: "社会とのつながり",
+    description: "働く経験を積み重ね、社会とのつながりへ。作業や日中活動を通して、役に立てた実感を育みます。",
+    services: ["就労継続支援B型", "のじぎく"]
+  },
+  {
+    title: "暮らし",
+    subtitle: "安心できる暮らし",
+    description: "安心できる暮らしと、自分らしい生活へ。地域の中で帰る場所がある安心を支えます。",
+    services: ["障がいグループホーム", "Hinodeシェアホーム"]
+  }
 ];
 
 export const metadata = createMetadata({

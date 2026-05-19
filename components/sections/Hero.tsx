@@ -38,17 +38,17 @@ export function Hero() {
             <p className="text-[0.68rem] font-black uppercase tracking-[0.28em] text-leaf-700 sm:text-xs">
               EMIFULL Welfare
             </p>
-            <h1 className="mt-6 font-display text-[4.1rem] font-black leading-[0.98] tracking-normal text-ink sm:text-[6.4rem] lg:text-[8.5rem]">
+            <h1 className="mt-6 font-display text-[3.55rem] font-black leading-[1.04] tracking-normal text-ink sm:text-[5.6rem] lg:text-[7.7rem]">
               人生を、
               <br />
-              咲かせ
-              <br className="sm:hidden" />
-              つづける。
+              咲かせる
+              <br />
+              福祉。
             </h1>
             <p className="mt-8 max-w-xl text-lg font-bold leading-9 text-ink/76 sm:text-xl sm:leading-10">
-              発達、学び、働く、暮らす。
+              発達も、学びも、暮らしも。
               <br />
-              その人の時間に、そっと寄り添う。
+              子どもから大人まで、寄り添い続ける。
             </p>
           </div>
 

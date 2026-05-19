@@ -12,7 +12,7 @@ const brandDetails = [
     image: "/images/brand-sorato.webp",
     age: "未就学",
     feature: "遊び・ことば・生活",
-    support: "床に座り、同じ目線で関わりながら、伝えたい気持ちを育てます。",
+    support: "遊びを通して、就学前の子どものことばと生活の力を育みます。",
     mood: "木のおもちゃ、自然光、安心して遊べるぬくもり。"
   },
   {
@@ -21,7 +21,7 @@ const brandDetails = [
     image: "/images/brand-umie.webp",
     age: "小学生〜高校生",
     feature: "学び・居場所・自分らしさ",
-    support: "学校や家庭とは違う第3の居場所で、経験と葛藤を支えます。",
+    support: "学びを通して、学齢期の子どもの自分らしく進む力を育みます。",
     mood: "放課後の光、少人数、ゆっくり話せる静けさ。"
   },
   {
@@ -30,7 +30,7 @@ const brandDetails = [
     image: "/images/brand-karada-kids.webp",
     age: "未就学〜小学生",
     feature: "運動・挑戦・自信",
-    support: "できた経験を積み重ね、日常生活につながる身体の力を育てます。",
+    support: "運動を通して、子どもの自信と挑戦する気持ちを育みます。",
     mood: "風、動き、ジャンプ、挑戦したあとの笑い声。"
   },
   {
@@ -39,7 +39,7 @@ const brandDetails = [
     image: "/images/brand-job-college.webp",
     age: "中高生",
     feature: "体験・役割・働く準備",
-    support: "PCや作業体験を通して、働く未来に必要な力を育みます。",
+    support: "体験を通して、中高生の働くために必要な力を育みます。",
     mood: "集中する手元、会話、役に立てた実感。"
   },
   {
@@ -57,7 +57,7 @@ const brandDetails = [
     image: "/images/brand-hinode.webp",
     age: "大人",
     feature: "暮らし・安心・地域",
-    support: "地域の中で、自分らしく暮らす生活のリズムを支えます。",
+    support: "安心できる暮らしを通して、自分らしく生活していく力を育みます。",
     mood: "食卓、夜の灯り、帰る場所の安心。"
   },
   {
@@ -66,7 +66,7 @@ const brandDetails = [
     image: "/images/brand-nojigiku.webp",
     age: "大人",
     feature: "作業・習慣・社会参加",
-    support: "働く経験を通して、社会とのつながりと役割を育みます。",
+    support: "働く経験を通して、自分らしく社会と関わる力を育みます。",
     mood: "作業の手元、地域、ありがとうが聞こえそうな空気。"
   }
 ];

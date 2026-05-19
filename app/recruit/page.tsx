@@ -27,8 +27,8 @@ export default function RecruitPage() {
       <Breadcrumbs items={[{ name: "トップ", href: "/" }, { name: "採用情報", href: "/recruit" }]} />
       <PageHero
         eyebrow="Recruit"
-        title="支援観に共感して、集まるチームへ。"
-        description="募集条件だけで選ばれる採用ではなく、目の前の人をわかろうとする姿勢に共感して出会う採用を目指します。"
+        title="支援する人も、人として成長できる場所へ。"
+        description="EMIFULLが大切にしている支援を、ぜひ知ってください。募集条件だけではなく、目の前の人をわかろうとする姿勢に共感して出会う採用を目指します。"
         cta="カジュアル面談へ"
         href="/consultation?type=recruit"
         imageSrc="/images/recruit-team.webp"

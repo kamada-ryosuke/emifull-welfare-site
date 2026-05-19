@@ -21,24 +21,27 @@ const serviceCards = [
 ];
 
 const brandCards = [
-  { name: "SORATO", text: "遊びの中で、ことばと生活の力を育む。", href: "/brands/sorato", image: "/images/brand-sorato.webp" },
-  { name: "UMIE", text: "自分のペースで学び、過ごせる居場所。", href: "/brands/umie", image: "/images/brand-umie.webp" },
-  { name: "カラダキッズ", text: "からだを動かす楽しさが、自信に変わる。", href: "/brands/karada-kids", image: "/images/brand-karada-kids.webp" },
-  { name: "ジョブカレッジ", text: "働く未来を、ここで一緒に育てる。", href: "/brands/job-college", image: "/images/brand-job-college.webp" }
+  { name: "SORATO", text: "遊びを通して、就学前の子どものことばと生活の力を育みます。", href: "/brands/sorato", image: "/images/brand-sorato.webp" },
+  { name: "UMIE", text: "学びを通して、学齢期の子どもの自分らしく進む力を育みます。", href: "/brands/umie", image: "/images/brand-umie.webp" },
+  { name: "カラダキッズ", text: "運動を通して、子どもの自信と挑戦する気持ちを育みます。", href: "/brands/karada-kids", image: "/images/brand-karada-kids.webp" },
+  { name: "ジョブカレッジ", text: "体験を通して、中高生の働くために必要な力を育みます。", href: "/brands/job-college", image: "/images/brand-job-college.webp" },
+  { name: "Hinodeシェアホーム", text: "安心できる暮らしを通して、自分らしく生活していく力を育みます。", href: "/brands/hinode-sharehome", image: "/images/brand-hinode.webp" },
+  { name: "のじぎく", text: "働く経験を通して、自分らしく社会と関わる力を育みます。", href: "/brands/nojigiku", image: "/images/brand-nojigiku.webp" }
 ];
 
 const lifeCards = [
-  { title: "未就学", text: "伝わる安心から", href: "/life-stage" },
-  { title: "学齢期", text: "自分でいられる居場所へ", href: "/life-stage" },
-  { title: "思春期", text: "未来に触れる経験へ", href: "/life-stage" },
-  { title: "働く", text: "役割と社会とのつながりへ", href: "/life-stage" },
-  { title: "暮らす", text: "帰る場所の安心へ", href: "/life-stage" }
+  { title: "未就学", text: "ことば・生活・安心の土台を育てる。", href: "/life-stage" },
+  { title: "学齢期", text: "学び・関わり・自分らしさを育てる。", href: "/life-stage" },
+  { title: "思春期", text: "将来につながる経験と自信を育てる。", href: "/life-stage" },
+  { title: "働く", text: "働く経験を積み重ね、社会とのつながりへ。", href: "/life-stage" },
+  { title: "暮らし", text: "安心できる暮らしと、自分らしい生活へ。", href: "/life-stage" }
 ];
 
 const facilityTeasers = [
-  { name: "天理エリア", text: "児童発達支援・放課後等デイサービス・グループホーム", href: "/facilities" },
-  { name: "加古川エリア", text: "就労準備型支援・訪問支援", href: "/facilities" },
-  { name: "高砂・稲美エリア", text: "就労継続支援B型・児童支援", href: "/facilities" }
+  { prefecture: "奈良県", name: "天理市エリア", text: "児童発達支援・放課後等デイサービス・保育所等訪問支援・障がいグループホーム", href: "/facilities" },
+  { prefecture: "兵庫県", name: "加古川市エリア", text: "運動療育特化型放デイ・就労準備型放デイ・障がいグループホーム", href: "/facilities" },
+  { prefecture: "兵庫県", name: "高砂市エリア", text: "就労継続支援B型", href: "/facilities" },
+  { prefecture: "兵庫県", name: "加古郡稲美町エリア", text: "児童発達支援・放課後等デイサービス・保育所等訪問支援・就労継続支援B型", href: "/facilities" }
 ];
 
 export function HomeConsultationGateway() {
@@ -92,9 +95,11 @@ export function HomeFacilityGateway() {
             Facilities
           </p>
           <h2 className="mt-4 font-display text-3xl font-black leading-[1.35] text-ink sm:text-5xl">
-            近くで相談できる場所を、
+            近くで
             <br />
-            まず探す。
+            相談できる場所を
+            <br />
+            探します！
           </h2>
           <p className="mt-5 text-sm font-bold leading-8 text-ink/62">
             地域、年齢、相談したい内容から、今の暮らしに近い施設へつなぎます。
@@ -103,14 +108,14 @@ export function HomeFacilityGateway() {
             <Button href="/facilities">施設を探す</Button>
           </div>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {facilityTeasers.map((facility) => (
             <Link
               key={facility.name}
               href={facility.href}
               className="rounded-[24px] bg-white/86 p-5 shadow-[0_18px_42px_rgba(33,112,159,0.09)] transition hover:-translate-y-1"
             >
-              <p className="text-xs font-black text-leaf-600">施設検索</p>
+              <p className="text-xs font-black text-leaf-600">{facility.prefecture}</p>
               <h3 className="mt-3 text-2xl font-black text-ink">{facility.name}</h3>
               <p className="mt-3 text-sm font-bold leading-7 text-ink/60">{facility.text}</p>
             </Link>
@@ -174,7 +179,7 @@ export function HomeBrandGateway() {
             それぞれの空気を。
           </h2>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {brandCards.map((brand) => (
             <Link key={brand.name} href={brand.href} className="group">
               <EmotionalImage
@@ -239,12 +244,12 @@ export function HomeRecruitGateway() {
             Recruit
           </p>
           <h2 className="mt-4 font-display text-3xl font-black leading-[1.35] sm:text-5xl">
-            誰かの“できた”を、
+            支援する人も、
             <br />
-            人生の力に変える仕事。
+            人として成長できる場所へ。
           </h2>
           <p className="mt-5 text-sm font-bold leading-8 text-white/70">
-            募集条件だけではなく、EMIFULLが大切にしている支援観から知ってください。
+            EMIFULLが大切にしている支援を、ぜひ知ってください。
           </p>
           <div className="mt-7">
             <Button href="/recruit" variant="ghost">採用情報を見る</Button>

@@ -33,7 +33,7 @@ export default function FacilitiesPage() {
       <Breadcrumbs items={[{ name: "トップ", href: "/" }, { name: "施設を探す", href: "/facilities" }]} />
       <PageHero
         eyebrow="Facilities"
-        title="近くで相談できる場所を探す。"
+        title="近くで相談できる場所を探します！"
         description="地域、サービス、対象年齢から、今の不安に近い施設へつなぎます。LINE相談・見学予約もこちらから進めます。"
         cta="まず相談する"
         href="/consultation"
