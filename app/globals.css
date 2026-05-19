@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+::selection {
+  background: #cfe0c6;
+  color: #1d392e;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leaf-sway {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-16deg);
+  }
+  50% {
+    transform: translate3d(8px, -10px, 0) rotate(8deg);
+  }
+}
+
+@keyframes branch-grow {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.hero-visual,
+.story-card,
+.brand-tree,
+.brand-leaf {
+  animation: float-in 0.8s ease both;
+}
+
+.photo-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.photo-moment {
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.photo-moment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 44%),
+    radial-gradient(circle at 20% 10%, rgba(199, 236, 250, 0.18), transparent 32%),
+    radial-gradient(circle at 40% 90%, rgba(46, 163, 206, 0.07), transparent 36%);
+  pointer-events: none;
+}
+
+.photo-moment img {
+  filter: saturate(0.94) contrast(0.98) brightness(1.04);
+}
+
+.brand-leaf:nth-child(3n + 1) {
+  margin-top: 3rem;
+}
+
+.brand-leaf:nth-child(4n) {
+  margin-top: 7rem;
+}
+
+.photo-card-main {
+  animation: float-in 0.9s ease both;
+}
+
+.brand-leaf:nth-child(2),
+.story-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.brand-leaf:nth-child(3),
+.story-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.brand-leaf:nth-child(4),
+.story-card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.brand-leaf:nth-child(5),
+.story-card:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.leaf {
+  position: absolute;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px 999px 999px 0;
+  background: rgba(111, 155, 122, 0.42);
+  transform-origin: 70% 90%;
+  animation: leaf-sway 6s ease-in-out infinite;
+}
+
+.leaf-1 {
+  right: 24%;
+  top: 9%;
+}
+
+.leaf-2 {
+  left: 16%;
+  bottom: 35%;
+  width: 26px;
+  height: 16px;
+  animation-delay: 1.2s;
+}
+
+.leaf-3 {
+  right: 12%;
+  bottom: 24%;
+  width: 24px;
+  height: 15px;
+  animation-delay: 2.1s;
+}
+
+.story-line {
+  position: relative;
+}
+
+.story-line::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, #a8c9a3, #f4cf70, #bfdce8);
+  opacity: 0.55;
+}
+
+.tree-branch {
+  position: absolute;
+  top: 54%;
+  height: 4px;
+  width: 34%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(111, 155, 122, 0), rgba(111, 155, 122, 0.65));
+  animation: branch-grow 1.1s ease both;
+}
+
+.branch-left {
+  left: 8%;
+  transform-origin: right center;
+  rotate: -16deg;
+}
+
+.branch-right {
+  right: 8%;
+  transform-origin: left center;
+  rotate: 16deg;
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 92px;
+  }
+
+  .story-line::before,
+  .tree-branch,
+  .tree-trunk {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

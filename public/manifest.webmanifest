@@ -1,0 +1,16 @@
+{
+  "name": "EMIFULL障がい福祉事業部",
+  "short_name": "EMIFULL福祉",
+  "description": "人生を、咲かせつづける福祉。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfeff",
+  "theme_color": "#77c8ec",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
